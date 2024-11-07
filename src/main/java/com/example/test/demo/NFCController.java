@@ -15,6 +15,7 @@ public class NFCController {
     public ResponseEntity<NFCParserResponse> nfcParser(@RequestBody NFCParserRequest nfcParserRequest) {
         JSONObject jsonRequest = new JSONObject();
         jsonRequest.put("dg1", nfcParserRequest.getDg1());
+        jsonRequest.put("dg2", nfcParserRequest.getDg2());
         jsonRequest.put("dg13", nfcParserRequest.getDg13());
 
         logger.info("User request: {}", jsonRequest);
