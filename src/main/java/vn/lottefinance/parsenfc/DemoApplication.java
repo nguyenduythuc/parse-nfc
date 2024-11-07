@@ -1,4 +1,4 @@
-package com.example.test.demo;
+package vn.lottefinance.parsenfc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

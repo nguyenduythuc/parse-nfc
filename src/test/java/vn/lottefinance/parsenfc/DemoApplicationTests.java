@@ -1,4 +1,4 @@
-package com.example.test.demo;
+package vn.lottefinance.parsenfc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

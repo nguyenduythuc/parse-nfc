@@ -1,4 +1,4 @@
-package com.example.test.demo;
+package vn.lottefinance.parsenfc.util;
 
 import java.util.Base64;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import vn.lottefinance.parsenfc.service.dto.NFCParserResponseDto;
 
 public class NFCParser {
     private static final Logger logger = LoggerFactory.getLogger(NFCParser.class);
@@ -16,10 +17,10 @@ public class NFCParser {
     }
 
     // Main parsing method
-    public static NFCParserResponse parsePassportData(JSONObject passportData) {
+    public static NFCParserResponseDto parsePassportData(JSONObject passportData) {
         try {
             logger.info("Starting passport data parsing");
-            NFCParserResponse result = new NFCParserResponse();
+            NFCParserResponseDto result = new NFCParserResponseDto();
 
             // Process DG1 - return MRZ data
             try {
@@ -141,7 +142,7 @@ public class NFCParser {
         return dg13Fields;
     }
 
-    private static void mapFieldsToPassportData(NFCParserResponse result, Map<String, String> fields) {
+    private static void mapFieldsToPassportData(NFCParserResponseDto result, Map<String, String> fields) {
 
         // Handle Citizen Identity Card
         String idNumber = cleanField(getFieldValue(fields, "1"), false);

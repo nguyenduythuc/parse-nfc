@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: parse-nfc
+  main:
+    allow-bean-definition-overriding: true
+server:
+  servlet:
+    context-path: /parse-nfc
+logging:
+  level:
+    vn.lottefinance.parsenfc: DEBUG
+app:
+  api:
+    key: yrryryyg54647y45242424
